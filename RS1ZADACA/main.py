@@ -405,6 +405,7 @@ def pokreni_zadatak(zadatak):
                     if not broj.startswith("0"):
                         broj = "0" + broj
 
+                    # raspakiranje varijabli po potrebi
                     svi = {**fiksni, **mobilni, **posebni}
                     pozivni = next((poz for poz in sorted(svi, key=len, reverse=True) if broj.startswith(poz)), None)
 
